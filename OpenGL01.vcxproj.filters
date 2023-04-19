@@ -13,46 +13,64 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Public">
-      <UniqueIdentifier>{18503f19-3316-43c4-82e6-9ae8055c0c27}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Private">
-      <UniqueIdentifier>{1b1bd64b-f978-4abf-b978-b6677a559f7e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Shaders">
       <UniqueIdentifier>{2bcf24d9-cd40-4976-ac82-deb662b95372}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{7d54ec3b-5368-4a95-953b-c5b64f4d57a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Source Files">
+      <UniqueIdentifier>{b93abe02-fec5-4856-a9f5-4c8b093d23d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Header Files">
+      <UniqueIdentifier>{940130dc-23e9-4f0f-9fa1-cc98d22cd93d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\glad.c">
+    <ClCompile Include="Engine\Source\Texture.cpp">
+      <Filter>Engine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Source\Input.cpp">
+      <Filter>Engine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Source\Mesh.cpp">
+      <Filter>Engine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Source\Model.cpp">
+      <Filter>Engine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Source\Shader.cpp">
+      <Filter>Engine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\main.cpp">
+    <ClCompile Include="Application\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Private\Input.cpp">
-      <Filter>Source Files\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Private\Shader.cpp">
-      <Filter>Source Files\Private</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Public\Input.h">
-      <Filter>Source Files\Public</Filter>
+    <ClInclude Include="Engine\Header\Texture.hpp">
+      <Filter>Engine\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Public\Shader.h">
-      <Filter>Source Files\Public</Filter>
+    <ClInclude Include="Engine\Header\Input.hpp">
+      <Filter>Engine\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Source Files\Public</Filter>
+    <ClInclude Include="Engine\Header\Mesh.hpp">
+      <Filter>Engine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Header\Model.hpp">
+      <Filter>Engine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Header\Shader.hpp">
+      <Filter>Engine\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\Shaders\FS_01.glsl">
+    <None Include="Application\Shaders\VS_01.glsl">
       <Filter>Source Files\Shaders</Filter>
     </None>
-    <None Include="src\Shaders\VS_01.glsl">
+    <None Include="Application\Shaders\FS_01.glsl">
       <Filter>Source Files\Shaders</Filter>
     </None>
   </ItemGroup>

@@ -71,11 +71,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:\Projetos\OpenGL01\src\Public;D:\Projetos\OpenGL01\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\Projetos\OpenGL01\Engine\Header;D:\Projetos\OpenGL01\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\Projetos\OpenGL01\libs;D:\Projetos\OpenGL01\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\Projetos\OpenGL01\src\Public;D:\Projetos\OpenGL01\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>D:\Projetos\OpenGL01\Engine\Header;D:\Projetos\OpenGL01\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>D:\Projetos\OpenGL01\libs;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -137,19 +137,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\glad.c" />
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Private\Input.cpp" />
-    <ClCompile Include="src\Private\Shader.cpp" />
+    <ClCompile Include="Application\glad.c" />
+    <ClCompile Include="Application\main.cpp" />
+    <ClCompile Include="Engine\Source\Input.cpp" />
+    <ClCompile Include="Engine\Source\Mesh.cpp" />
+    <ClCompile Include="Engine\Source\Model.cpp" />
+    <ClCompile Include="Engine\Source\Shader.cpp" />
+    <ClCompile Include="Engine\Source\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="src\Public\Input.h" />
-    <ClInclude Include="src\Public\Shader.h" />
+    <ClInclude Include="Engine\Header\Input.hpp" />
+    <ClInclude Include="Engine\Header\Mesh.hpp" />
+    <ClInclude Include="Engine\Header\Model.hpp" />
+    <ClInclude Include="Engine\Header\Shader.hpp" />
+    <ClInclude Include="Engine\Header\Texture.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\Shaders\FS_01.glsl" />
-    <None Include="src\Shaders\VS_01.glsl" />
+    <None Include="Application\Shaders\FS_01.glsl" />
+    <None Include="Application\Shaders\VS_01.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
