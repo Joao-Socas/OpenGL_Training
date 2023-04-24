@@ -4,7 +4,7 @@
 Model::Model(std::string path)
 {
 	Assimp::Importer importer;
-	const aiScene* scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs);
+	const aiScene* scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_GenSmoothNormals | aiProcess_CalcTangentSpace);
 
     // Error handling
     if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
@@ -46,8 +46,8 @@ void Model::processNode_Recursive(aiNode* node, const aiScene* scene)
 void Model::processMesh(aiMesh* mesh, const aiScene* scene)
 {
     // Unique pointer generation to prevent copy constructors to be called on extensive vectors
-    std::unique_ptr<std::vector<Vertex>>                                    vertices  = std::make_unique<std::vector<Vertex>>();
-    std::unique_ptr<std::vector<unsigned int[3]>>                           triangles = std::make_unique<std::vector<unsigned int[3]>>();
+    std::unique_ptr<std::vector<Vertex>>                                    vertices = std::make_unique<std::vector<Vertex>>();
+    std::unique_ptr<std::vector<std::array<unsigned int, 3>>>               triangles = std::make_unique<std::vector<std::array<unsigned int, 3>>>();
     std::unique_ptr<std::multimap<TextureType, std::shared_ptr<Texture>>>   textures = std::make_unique<std::multimap<TextureType, std::shared_ptr<Texture>>>();
 
     // Vertices processing
@@ -91,15 +91,17 @@ void Model::processMesh(aiMesh* mesh, const aiScene* scene)
     for (unsigned int i = 0; i < mesh->mNumFaces; i++)
     {
         // Since aiProcess_Triangulate, faces are aways triangles
-        triangles->push_back({ mesh->mFaces[i].mIndices[0],mesh->mFaces[i].mIndices[1],mesh->mFaces[i].mIndices[2] }); 
+        triangles->push_back(std::array<unsigned int, 3>{ mesh->mFaces[i].mIndices[0], mesh->mFaces[i].mIndices[1] ,mesh->mFaces[i].mIndices[2] });
     }
 
     if (mesh->mMaterialIndex >= 0)
     {
         aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
+        loadMaterialTextures(material, aiTextureType_DIFFUSE, TextureType::Albedo, textures);
     }
+    meshes.push_back(std::move(Mesh(std::move(vertices), std::move(triangles), std::move(textures))));
 
-    meshes.push_back(Mesh(std::move(vertices), std::move(triangles), std::move(textures)));
+
 }
 
 void Model::loadMaterialTextures(aiMaterial* mat, aiTextureType type, TextureType texture_type, std::unique_ptr<std::multimap<TextureType, std::shared_ptr<Texture>>>& textures)

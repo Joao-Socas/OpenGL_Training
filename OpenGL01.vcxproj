@@ -73,10 +73,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>D:\Projetos\OpenGL01\Engine\Header;D:\Projetos\OpenGL01\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\Projetos\OpenGL01\libs;D:\Projetos\OpenGL01\libs;$(LibraryPath)</LibraryPath>
+    <PublicIncludeDirectories>
+    </PublicIncludeDirectories>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>D:\Projetos\OpenGL01\Engine\Header;D:\Projetos\OpenGL01\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>D:\Projetos\OpenGL01\libs;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <PublicIncludeDirectories>
+    </PublicIncludeDirectories>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -112,11 +116,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Projetos\OpenGL01\Application\Header;C:\Projetos\OpenGL01\Engine\Header;C:\Projetos\OpenGL01\include;$(PublicIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc143-mt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Projetos\OpenGL01\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,13 +133,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Projetos\OpenGL01\Application\Header;C:\Projetos\OpenGL01\Engine\Header;C:\Projetos\OpenGL01\include;$(PublicIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc143-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Projetos\OpenGL01\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -144,6 +152,7 @@
     <ClCompile Include="Engine\Source\Model.cpp" />
     <ClCompile Include="Engine\Source\Shader.cpp" />
     <ClCompile Include="Engine\Source\Texture.cpp" />
+    <ClCompile Include="include\STB\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Header\Input.hpp" />
@@ -151,6 +160,7 @@
     <ClInclude Include="Engine\Header\Model.hpp" />
     <ClInclude Include="Engine\Header\Shader.hpp" />
     <ClInclude Include="Engine\Header\Texture.hpp" />
+    <ClInclude Include="include\STB\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Application\Shaders\FS_01.glsl" />

@@ -27,7 +27,7 @@ float lastFrame = 0.0f; // Time of last frame
 float lastX = 400, lastY = 300;
 float yaw = -90.0f, pitch = 0.0f;
 
-glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
+glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 5.0f);
 glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
 glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
 
@@ -115,10 +115,10 @@ int main()
     projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 300.0f);
 
     ShaderProgram shader_program(VertexShader("Application/Shaders/VS_01.glsl"), FragmentShader("Application/Shaders/FS_01.glsl"));
-    Model model("Application/Models/TwistedCube.obj");
+    Model model("Application/Models/backpack.obj");
 
     glEnable(GL_DEPTH_TEST);
-
+    shader_program.use();
 	while (!glfwWindowShouldClose(window))
 	{
         float currentFrame = glfwGetTime();
@@ -138,7 +138,6 @@ int main()
         // render the loaded model
         glm::mat4 model_transform = glm::mat4(1.0f);
         model_transform = glm::translate(model_transform, glm::vec3(0.0f, 0.0f, 0.0f)); // translate it down so it's at the center of the scene
-        model_transform = glm::scale(model_transform, glm::vec3(1.0f, 1.0f, 1.0f));	// it's a bit too big for our scene, so scale it down
         shader_program.setUniform("model", model_transform);
         model.Draw(shader_program);
         

@@ -25,6 +25,9 @@
     <Filter Include="Engine\Header Files">
       <UniqueIdentifier>{940130dc-23e9-4f0f-9fa1-cc98d22cd93d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="STBi">
+      <UniqueIdentifier>{e58370a8-4e27-46cc-a6e5-4910d7983810}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Source\Texture.cpp">
@@ -48,6 +51,9 @@
     <ClCompile Include="Application\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="include\STB\stb_image.cpp">
+      <Filter>STBi</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Header\Texture.hpp">
@@ -64,6 +70,9 @@
     </ClInclude>
     <ClInclude Include="Engine\Header\Shader.hpp">
       <Filter>Engine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\STB\stb_image.h">
+      <Filter>STBi</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

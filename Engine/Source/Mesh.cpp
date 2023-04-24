@@ -1,20 +1,41 @@
 // Project Includes
 #include "Mesh.hpp"
 
-Mesh::Mesh(std::unique_ptr<std::vector<Vertex>> vertices, std::unique_ptr<std::vector<unsigned int[3]>> indices, std::unique_ptr<std::multimap<TextureType, std::shared_ptr<Texture>>> textures) : vertices(std::move(vertices)), triangles(std::move(triangles)), textures(std::move(textures))
+Mesh::Mesh(std::unique_ptr<std::vector<Vertex>> _vertices, std::unique_ptr<std::vector<std::array<unsigned int, 3>>> _triangles, std::unique_ptr<std::multimap<TextureType, std::shared_ptr<Texture>>> _textures)
 {
+    vertices = std::move(_vertices);
+    triangles = std::move(_triangles);
+    textures = std::move(_textures);
 	glGenVertexArrays(1, &Vertex_Array_Object_ID);
 	glGenBuffers(1, &Vertex_Buffer_Object_ID);
 	glGenBuffers(1, &Element_Buffer_Object_ID);
 
+    //std::vector<Vertex> TestVertices = {};
+    //Vertex a, b, c, d, e, f;
+    //a.Position = { 0.0f, 0.0f, 0.0f };
+    //b.Position = { 0.5f, 0.0f, 0.0f };
+    //c.Position = { 0.5f, 0.5f, 0.0f };
+    //d.Position = { 0.0f, 0.0f, 0.0f };
+    //e.Position = { 0.5f, 0.5f, 0.0f };
+    //f.Position = { 0.0f, 0.5f, 0.0f };
+    //TestVertices.push_back(a);
+    //TestVertices.push_back(b);
+    //TestVertices.push_back(c);
+    //TestVertices.push_back(d);
+    //TestVertices.push_back(e);
+    //TestVertices.push_back(f);
+    //TestVertices = *vertices.get();
+
+
 	// Vertex array and buffer binding and data setting
 	glBindVertexArray(Vertex_Array_Object_ID);
 	glBindBuffer(GL_ARRAY_BUFFER, Vertex_Buffer_Object_ID);
-	glBufferData(GL_ARRAY_BUFFER, vertices->size() * sizeof(Vertex), &vertices.get()[0], GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, vertices->size() * sizeof(Vertex), &(*vertices.get())[0], GL_STATIC_DRAW);
 
+    //std::vector<unsigned int> TestTriangles = {0,1,2,3,4,5};
 	// Element buffer binding and data setting
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, Element_Buffer_Object_ID);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, triangles->size() * sizeof(unsigned int) * 3, &triangles.get()[0], GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, triangles->size() * sizeof(unsigned int) * 3, &(*triangles.get())[0], GL_STATIC_DRAW);
 
 	// Setting pointers
     // vertex Positions
@@ -38,14 +59,10 @@ Mesh::Mesh(std::unique_ptr<std::vector<Vertex>> vertices, std::unique_ptr<std::v
     // weights
     glEnableVertexAttribArray(6);
     glVertexAttribPointer(6, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, BoneWeights));
-    
     // Unbiding
     glBindVertexArray(0);
 }
 
-Mesh::~Mesh()
-{
-}
 
 void Mesh::Draw(ShaderProgram& shader_program)
 {
