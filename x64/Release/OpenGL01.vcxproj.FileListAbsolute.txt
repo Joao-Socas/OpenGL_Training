@@ -1,2 +1,0 @@
-C:\Projetos\OpenGL01\x64\Release\OpenGL01.exe
-D:\Projetos\OpenGL01\x64\Release\OpenGL01.exe
