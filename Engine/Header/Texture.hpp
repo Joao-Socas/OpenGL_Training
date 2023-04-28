@@ -47,6 +47,8 @@ public:
 		UNSET = 0x07 // REPEATU | REPEATV | REPEATW
 	};
 
+
+
 	enum MAGNIFYING
 	{
 		MAGNIFY_NEAREST,
@@ -84,3 +86,8 @@ private:
 	int width, height, nrChannels;
 	void Setup(const WRAPPING wrapping, const MAGNIFYING magnifying, const MIPMAPPING mipmapping);
 };
+
+inline Texture::WRAPPING operator|(Texture::WRAPPING a, Texture::WRAPPING b)
+{
+	return static_cast<Texture::WRAPPING>(static_cast<int>(a) | static_cast<int>(b));
+}

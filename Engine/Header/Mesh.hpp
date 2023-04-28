@@ -8,6 +8,7 @@
 // STD Includes
 #include <string>
 #include <vector>
+#include <array>
 
 // Project Includes
 #include "Shader.hpp"
@@ -35,14 +36,14 @@ class Mesh
 {
 public:
     
-    Mesh(std::unique_ptr<std::vector<Vertex>> vertices, std::unique_ptr<std::vector<unsigned int[3]>> indices, std::unique_ptr<std::multimap<TextureType, std::shared_ptr<Texture>>> textures);
-    ~Mesh();
+    Mesh(std::unique_ptr<std::vector<Vertex>> _vertices, std::unique_ptr<std::vector<std::array<unsigned int, 3>>> _triangles, std::unique_ptr<std::multimap<TextureType, std::shared_ptr<Texture>>> _textures);
+    //~Mesh();
 
     void Draw(ShaderProgram& shader_program);
 
 private:
     std::unique_ptr<std::vector<Vertex>> vertices;
-    std::unique_ptr<std::vector<unsigned int[3]>> triangles;
+    std::unique_ptr<std::vector<std::array<unsigned int,3>>> triangles;
     std::unique_ptr<std::multimap<TextureType,std::shared_ptr<Texture>>> textures;
     //std::unique_ptr<ShaderProgram> shader_program;
 

@@ -27,7 +27,7 @@ float lastFrame = 0.0f; // Time of last frame
 float lastX = 400, lastY = 300;
 float yaw = -90.0f, pitch = 0.0f;
 
-glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
+glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 5.0f);
 glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
 glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
 
@@ -71,7 +71,7 @@ void processInput(GLFWwindow* window)
         glfwSetWindowShouldClose(window, true);
     }
 
-    const float cameraSpeed = 2.5f * deltaTime;
+    const float cameraSpeed = 500.f * deltaTime;
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
         cameraPos += cameraSpeed * cameraFront;
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
@@ -89,6 +89,11 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    stbi_set_flip_vertically_on_load(true);
+
+    glm::vec3 light_1_position(1.2f, 1.0f, 2.0f);
+    glm::vec3 light_1_color(1.0f, 1.0f, 1.0f);
+    float light_1_strength(1.f);
 
 	GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGl01", NULL, NULL);
 	if (window == NULL)
@@ -112,13 +117,17 @@ int main()
 	glViewport(0, 0, 800, 600);
 
     glm::mat4 projection;
-    projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 300.0f);
+    projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 10000.0f);
 
-    ShaderProgram shader_program(VertexShader("Application/Shaders/VS_01.glsl"), FragmentShader("Application/Shaders/FS_01.glsl"));
-    Model model("Application/Models/TwistedCube.obj");
+    ShaderProgram shader_program(VertexShader("Engine/Shaders/VS_01.glsl"), FragmentShader("Engine/Shaders/FS_01.glsl"));
+    //Model model("Application/Models/backpack.obj");
+    //Model model("Application/Models/TwistedCube.obj");
+    Model model("Application/Models/scene/ArchVis_RT.obj");
 
+    
     glEnable(GL_DEPTH_TEST);
-
+    glEnable(GL_CULL_FACE);
+    shader_program.use();
 	while (!glfwWindowShouldClose(window))
 	{
         float currentFrame = glfwGetTime();
@@ -134,15 +143,19 @@ int main()
 
         shader_program.setUniform("view", view);
         shader_program.setUniform("projection", projection);
+        shader_program.setUniform("shininess", 32.0f);
+        shader_program.setUniform("specular_strength", 32.0f);
+        shader_program.setUniform("light_1_position", light_1_position);
+        shader_program.setUniform("light_1_color", light_1_color);
+        shader_program.setUniform("light_1_strength", light_1_strength);
+        shader_program.setUniform("view_position", cameraPos);
 
         // render the loaded model
         glm::mat4 model_transform = glm::mat4(1.0f);
         model_transform = glm::translate(model_transform, glm::vec3(0.0f, 0.0f, 0.0f)); // translate it down so it's at the center of the scene
-        model_transform = glm::scale(model_transform, glm::vec3(1.0f, 1.0f, 1.0f));	// it's a bit too big for our scene, so scale it down
         shader_program.setUniform("model", model_transform);
         model.Draw(shader_program);
         
-
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}

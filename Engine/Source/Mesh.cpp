@@ -1,8 +1,11 @@
 // Project Includes
 #include "Mesh.hpp"
 
-Mesh::Mesh(std::unique_ptr<std::vector<Vertex>> vertices, std::unique_ptr<std::vector<unsigned int[3]>> indices, std::unique_ptr<std::multimap<TextureType, std::shared_ptr<Texture>>> textures) : vertices(std::move(vertices)), triangles(std::move(triangles)), textures(std::move(textures))
+Mesh::Mesh(std::unique_ptr<std::vector<Vertex>> _vertices, std::unique_ptr<std::vector<std::array<unsigned int, 3>>> _triangles, std::unique_ptr<std::multimap<TextureType, std::shared_ptr<Texture>>> _textures)
 {
+    vertices = std::move(_vertices);
+    triangles = std::move(_triangles);
+    textures = std::move(_textures);
 	glGenVertexArrays(1, &Vertex_Array_Object_ID);
 	glGenBuffers(1, &Vertex_Buffer_Object_ID);
 	glGenBuffers(1, &Element_Buffer_Object_ID);
@@ -10,11 +13,11 @@ Mesh::Mesh(std::unique_ptr<std::vector<Vertex>> vertices, std::unique_ptr<std::v
 	// Vertex array and buffer binding and data setting
 	glBindVertexArray(Vertex_Array_Object_ID);
 	glBindBuffer(GL_ARRAY_BUFFER, Vertex_Buffer_Object_ID);
-	glBufferData(GL_ARRAY_BUFFER, vertices->size() * sizeof(Vertex), &vertices.get()[0], GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, vertices->size() * sizeof(Vertex), &(*vertices.get())[0], GL_STATIC_DRAW);
 
 	// Element buffer binding and data setting
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, Element_Buffer_Object_ID);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, triangles->size() * sizeof(unsigned int) * 3, &triangles.get()[0], GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, triangles->size() * sizeof(unsigned int) * 3, &(*triangles.get())[0], GL_STATIC_DRAW);
 
 	// Setting pointers
     // vertex Positions
@@ -38,14 +41,10 @@ Mesh::Mesh(std::unique_ptr<std::vector<Vertex>> vertices, std::unique_ptr<std::v
     // weights
     glEnableVertexAttribArray(6);
     glVertexAttribPointer(6, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, BoneWeights));
-    
     // Unbiding
     glBindVertexArray(0);
 }
 
-Mesh::~Mesh()
-{
-}
 
 void Mesh::Draw(ShaderProgram& shader_program)
 {
@@ -78,15 +77,15 @@ void Mesh::Draw(ShaderProgram& shader_program)
 
     // Metalic textures bidings
     iterator_range = textures->equal_range(TextureType::Metalic);
-    bindTextures(iterator_range, "NTextureMetalic");
+    //bindTextures(iterator_range, "NTextureMetalic");
 
     // Roughness textures bidings
     iterator_range = textures->equal_range(TextureType::Roughness);
-    bindTextures(iterator_range, "NTextureRoughness");
+    //bindTextures(iterator_range, "NTextureRoughness");
 
     // AmbientOclusion textures bidings
     iterator_range = textures->equal_range(TextureType::AmbientOclusion);
-    bindTextures(iterator_range, "NTextureAmbientOclusion");
+    //bindTextures(iterator_range, "NTextureAmbientOclusion");
 
     // Drawing
     glBindVertexArray(Vertex_Array_Object_ID);

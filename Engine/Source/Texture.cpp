@@ -1,12 +1,12 @@
 #include "Texture.hpp"
 
-std::vector<std::shared_ptr<Texture>> TextureStorage = std::vector<std::shared_ptr<Texture>>{};
+std::vector<std::shared_ptr<Texture>> Texture::TextureStorage = std::vector<std::shared_ptr<Texture>>{};
 
 Texture::Texture(std::string path, const WRAPPING wrapping, const MAGNIFYING magnifying, const MIPMAPPING mipmapping) : path(path)
 {
 	glGenTextures(1, &ID);
 	
-	unsigned char* textureData = stbi_load(path.c_str(), &width, &height, &nrChannels, 0);
+	unsigned char* textureData = stbi_load(("Application/Models/scene/" + path).c_str(), &width, &height, &nrChannels, 0);
 	if (textureData)
 	{
 		GLenum format;

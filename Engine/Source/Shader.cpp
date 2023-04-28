@@ -61,6 +61,8 @@ Shader::Shader(const char* Path)
     strcpy_s(shaderCode, SshaderCode.length() + 1, SshaderCode.c_str());
 }
 
+
+
 void Shader::checkCompileErrors(unsigned int shader, std::string type)
 {
     int success;

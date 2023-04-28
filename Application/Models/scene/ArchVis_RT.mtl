@@ -1,0 +1,465 @@
+﻿newmtl MI_WhiteSemiMatte
+	map_Kd MI_WhiteSemiMatte_D.bmp
+	map_Ks MI_WhiteSemiMatte_S.bmp
+	bump MI_WhiteSemiMatte_N.bmp
+
+newmtl MI_WoodVeneer2
+	map_Kd MI_WoodVeneer2_D.bmp
+	map_Ks MI_WoodVeneer2_S.bmp
+	bump MI_WoodVeneer2_N.bmp
+
+newmtl MI_Socket
+	map_Kd MI_Socket_D.bmp
+	map_Ks MI_Socket_S.bmp
+	bump MI_Socket_N.bmp
+
+newmtl MI_PeachPatFabric
+	map_Kd MI_PeachPatFabric_D.bmp
+	map_Ks MI_PeachPatFabric_S.bmp
+	bump MI_PeachPatFabric_N.bmp
+
+newmtl MI_GrayPatFabric
+	map_Kd MI_GrayPatFabric_D.bmp
+	map_Ks MI_GrayPatFabric_S.bmp
+	bump MI_GrayPatFabric_N.bmp
+
+newmtl MI_CyanFabric
+	map_Kd MI_CyanFabric_D.bmp
+	map_Ks MI_CyanFabric_S.bmp
+	bump MI_CyanFabric_N.bmp
+
+newmtl MI_GrayFabric1
+	map_Kd MI_GrayFabric1_D.bmp
+	map_Ks MI_GrayFabric1_S.bmp
+	bump MI_GrayFabric1_N.bmp
+
+newmtl MI_Wood4
+	map_Kd MI_Wood4_D.bmp
+	map_Ks MI_Wood4_S.bmp
+	bump MI_Wood4_N.bmp
+
+newmtl MI_TanRubber
+	map_Kd MI_TanRubber_D.bmp
+	map_Ks MI_TanRubber_S.bmp
+	bump MI_TanRubber_N.bmp
+
+newmtl MI_GrayFabric2
+	map_Kd MI_GrayFabric2_D.bmp
+	map_Ks MI_GrayFabric2_S.bmp
+	bump MI_GrayFabric2_N.bmp
+
+newmtl MI_GrayPatFabric2
+	map_Kd MI_GrayPatFabric2_D.bmp
+	map_Ks MI_GrayPatFabric2_S.bmp
+	bump MI_GrayPatFabric2_N.bmp
+
+newmtl MI_LightGrayMatte
+	map_Kd MI_LightGrayMatte_D.bmp
+	map_Ks MI_LightGrayMatte_S.bmp
+	bump MI_LightGrayMatte_N.bmp
+
+newmtl MI_WhiteFlat1
+	map_Kd MI_WhiteFlat1_D.bmp
+	map_Ks MI_WhiteFlat1_S.bmp
+	bump MI_WhiteFlat1_N.bmp
+
+newmtl MI_Wood1
+	map_Kd MI_Wood1_D.bmp
+	map_Ks MI_Wood1_S.bmp
+	bump MI_Wood1_N.bmp
+
+newmtl MI_Marble_White
+	map_Kd MI_Marble_White_D.bmp
+	map_Ks MI_Marble_White_S.bmp
+	bump MI_Marble_White_N.bmp
+
+newmtl MI_SteelDark
+	map_Kd MI_SteelDark_D.bmp
+	map_Ks MI_SteelDark_S.bmp
+	bump MI_SteelDark_N.bmp
+
+newmtl MI_White
+	map_Kd MI_White_D.bmp
+	map_Ks MI_White_S.bmp
+	bump MI_White_N.bmp
+
+newmtl MI_WindowInside
+	map_Kd MI_WindowInside_D.bmp
+	map_Ks MI_WindowInside_S.bmp
+	bump MI_WindowInside_N.bmp
+
+newmtl MI_LadderShelfWood
+	map_Kd MI_LadderShelfWood_D.bmp
+	map_Ks MI_LadderShelfWood_S.bmp
+	bump MI_LadderShelfWood_N.bmp
+
+newmtl MI_LivingFrame_Building
+	map_Kd MI_LivingFrame_Building_D.bmp
+	map_Ks MI_LivingFrame_Building_S.bmp
+	bump MI_LivingFrame_Building_N.bmp
+
+newmtl MI_LivingFrame_Cat
+	map_Kd MI_LivingFrame_Cat_D.bmp
+	map_Ks MI_LivingFrame_Cat_S.bmp
+	bump MI_LivingFrame_Cat_N.bmp
+
+newmtl MI_LivingFrame_Dog
+	map_Kd MI_LivingFrame_Dog_D.bmp
+	map_Ks MI_LivingFrame_Dog_S.bmp
+	bump MI_LivingFrame_Dog_N.bmp
+
+newmtl MI_Chrome1
+	map_Kd MI_Chrome1_D.bmp
+	map_Ks MI_Chrome1_S.bmp
+	bump MI_Chrome1_N.bmp
+
+newmtl MI_DiningChairMetal
+	map_Kd MI_DiningChairMetal_D.bmp
+	map_Ks MI_DiningChairMetal_S.bmp
+	bump MI_DiningChairMetal_N.bmp
+
+newmtl MI_DiningTableWood
+	map_Kd MI_DiningTableWood_D.bmp
+	map_Ks MI_DiningTableWood_S.bmp
+	bump MI_DiningTableWood_N.bmp
+
+newmtl 02_Chlorophytum_Comosum_Variegatum_sjskM_4K_inst
+	map_Kd 02_Chlorophytum_Comosum_Variegatum_sjskM_4K_inst_D.bmp
+	map_Ks 02_Chlorophytum_Comosum_Variegatum_sjskM_4K_inst_S.bmp
+	bump 02_Chlorophytum_Comosum_Variegatum_sjskM_4K_inst_N.bmp
+
+newmtl 03_Dracaena_Reflexa_Variegata_siumT_4K_inst
+	map_Kd 03_Dracaena_Reflexa_Variegata_siumT_4K_inst_D.bmp
+	map_Ks 03_Dracaena_Reflexa_Variegata_siumT_4K_inst_S.bmp
+	bump 03_Dracaena_Reflexa_Variegata_siumT_4K_inst_N.bmp
+
+newmtl 04_Snake_Plant_sgtmY_4K_inst
+	map_Kd 04_Snake_Plant_sgtmY_4K_inst_D.bmp
+	map_Ks 04_Snake_Plant_sgtmY_4K_inst_S.bmp
+	bump 04_Snake_Plant_sgtmY_4K_inst_N.bmp
+
+newmtl 05_Amaryllis_sgzkv_4K_inst
+	map_Kd 05_Amaryllis_sgzkv_4K_inst_D.bmp
+	map_Ks 05_Amaryllis_sgzkv_4K_inst_S.bmp
+	bump 05_Amaryllis_sgzkv_4K_inst_N.bmp
+
+newmtl 07_Aglaonema_Jubilee_Compacta_sikh4_4K_inst
+	map_Kd 07_Aglaonema_Jubilee_Compacta_sikh4_4K_inst_D.bmp
+	map_Ks 07_Aglaonema_Jubilee_Compacta_sikh4_4K_inst_S.bmp
+	bump 07_Aglaonema_Jubilee_Compacta_sikh4_4K_inst_N.bmp
+
+newmtl 01_Cat_Palm_tjejafeia_4K_inst
+	map_Kd 01_Cat_Palm_tjejafeia_4K_inst_D.bmp
+	map_Ks 01_Cat_Palm_tjejafeia_4K_inst_S.bmp
+	bump 01_Cat_Palm_tjejafeia_4K_inst_N.bmp
+
+newmtl WorldGridMaterial
+	map_Kd WorldGridMaterial_D.bmp
+	map_Ks WorldGridMaterial_S.bmp
+	bump WorldGridMaterial_N.bmp
+
+newmtl MI_SteelFrame
+	map_Kd MI_SteelFrame_D.bmp
+	map_Ks MI_SteelFrame_S.bmp
+	bump MI_SteelFrame_N.bmp
+
+newmtl MI_LivingFrame_Leaf4
+	map_Kd MI_LivingFrame_Leaf4_D.bmp
+	map_Ks MI_LivingFrame_Leaf4_S.bmp
+	bump MI_LivingFrame_Leaf4_N.bmp
+
+newmtl MI_LivingFrame_AV2
+	map_Kd MI_LivingFrame_AV2_D.bmp
+	map_Ks MI_LivingFrame_AV2_S.bmp
+	bump MI_LivingFrame_AV2_N.bmp
+
+newmtl MI_LivingFrame_Bridge
+	map_Kd MI_LivingFrame_Bridge_D.bmp
+	map_Ks MI_LivingFrame_Bridge_S.bmp
+	bump MI_LivingFrame_Bridge_N.bmp
+
+newmtl MI_LivingFrame_AV
+	map_Kd MI_LivingFrame_AV_D.bmp
+	map_Ks MI_LivingFrame_AV_S.bmp
+	bump MI_LivingFrame_AV_N.bmp
+
+newmtl MI_LivingFrame_Leaf1
+	map_Kd MI_LivingFrame_Leaf1_D.bmp
+	map_Ks MI_LivingFrame_Leaf1_S.bmp
+	bump MI_LivingFrame_Leaf1_N.bmp
+
+newmtl MI_LivingFrame_Handlebars
+	map_Kd MI_LivingFrame_Handlebars_D.bmp
+	map_Ks MI_LivingFrame_Handlebars_S.bmp
+	bump MI_LivingFrame_Handlebars_N.bmp
+
+newmtl MI_LivingFrame_Leaf3
+	map_Kd MI_LivingFrame_Leaf3_D.bmp
+	map_Ks MI_LivingFrame_Leaf3_S.bmp
+	bump MI_LivingFrame_Leaf3_N.bmp
+
+newmtl MI_LivingFrame_Leaf2
+	map_Kd MI_LivingFrame_Leaf2_D.bmp
+	map_Ks MI_LivingFrame_Leaf2_S.bmp
+	bump MI_LivingFrame_Leaf2_N.bmp
+
+newmtl MI_Picture_Cat
+	map_Kd MI_Picture_Cat_D.bmp
+	map_Ks MI_Picture_Cat_S.bmp
+	bump MI_Picture_Cat_N.bmp
+
+newmtl MI_BookPages2
+	map_Kd MI_BookPages2_D.bmp
+	map_Ks MI_BookPages2_S.bmp
+	bump MI_BookPages2_N.bmp
+
+newmtl MI_Book_SciontiDesign
+	map_Kd MI_Book_SciontiDesign_D.bmp
+	map_Ks MI_Book_SciontiDesign_S.bmp
+	bump MI_Book_SciontiDesign_N.bmp
+
+newmtl MI_Rug2
+	map_Kd MI_Rug2_D.bmp
+	map_Ks MI_Rug2_S.bmp
+	bump MI_Rug2_N.bmp
+
+newmtl MI_Wood3
+	map_Kd MI_Wood3_D.bmp
+	map_Ks MI_Wood3_S.bmp
+	bump MI_Wood3_N.bmp
+
+newmtl MI_PorcelainWhite
+	map_Kd MI_PorcelainWhite_D.bmp
+	map_Ks MI_PorcelainWhite_S.bmp
+	bump MI_PorcelainWhite_N.bmp
+
+newmtl MI_Wood2
+	map_Kd MI_Wood2_D.bmp
+	map_Ks MI_Wood2_S.bmp
+	bump MI_Wood2_N.bmp
+
+newmtl MI_Book_UE4RayTrace
+	map_Kd MI_Book_UE4RayTrace_D.bmp
+	map_Ks MI_Book_UE4RayTrace_S.bmp
+	bump MI_Book_UE4RayTrace_N.bmp
+
+newmtl MI_BookPages
+	map_Kd MI_BookPages_D.bmp
+	map_Ks MI_BookPages_S.bmp
+	bump MI_BookPages_N.bmp
+
+newmtl MI_Book_UE4
+	map_Kd MI_Book_UE4_D.bmp
+	map_Ks MI_Book_UE4_S.bmp
+	bump MI_Book_UE4_N.bmp
+
+newmtl MI_Book_LookUpPhoto
+	map_Kd MI_Book_LookUpPhoto_D.bmp
+	map_Ks MI_Book_LookUpPhoto_S.bmp
+	bump MI_Book_LookUpPhoto_N.bmp
+
+newmtl MI_BookBlack
+	map_Kd MI_BookBlack_D.bmp
+	map_Ks MI_BookBlack_S.bmp
+	bump MI_BookBlack_N.bmp
+
+newmtl MI_Bulb
+	map_Kd MI_Bulb_D.bmp
+	map_Ks MI_Bulb_S.bmp
+	bump MI_Bulb_N.bmp
+
+newmtl MI_WoodShelf
+	map_Kd MI_WoodShelf_D.bmp
+	map_Ks MI_WoodShelf_S.bmp
+	bump MI_WoodShelf_N.bmp
+
+newmtl MI_BookSolidWhite
+	map_Kd MI_BookSolidWhite_D.bmp
+	map_Ks MI_BookSolidWhite_S.bmp
+	bump MI_BookSolidWhite_N.bmp
+
+newmtl MI_Book_PetTherapy
+	map_Kd MI_Book_PetTherapy_D.bmp
+	map_Ks MI_Book_PetTherapy_S.bmp
+	bump MI_Book_PetTherapy_N.bmp
+
+newmtl MI_Book_PhotoEssential
+	map_Kd MI_Book_PhotoEssential_D.bmp
+	map_Ks MI_Book_PhotoEssential_S.bmp
+	bump MI_Book_PhotoEssential_N.bmp
+
+newmtl MI_BookSolidGray
+	map_Kd MI_BookSolidGray_D.bmp
+	map_Ks MI_BookSolidGray_S.bmp
+	bump MI_BookSolidGray_N.bmp
+
+newmtl MI_Steel
+	map_Kd MI_Steel_D.bmp
+	map_Ks MI_Steel_S.bmp
+	bump MI_Steel_N.bmp
+
+newmtl MI_Soil
+	map_Kd MI_Soil_D.bmp
+	map_Ks MI_Soil_S.bmp
+	bump MI_Soil_N.bmp
+
+newmtl MI_Rug
+	map_Kd MI_Rug_D.bmp
+	map_Ks MI_Rug_S.bmp
+	bump MI_Rug_N.bmp
+
+newmtl MI_DiningFrame2
+	map_Kd MI_DiningFrame2_D.bmp
+	map_Ks MI_DiningFrame2_S.bmp
+	bump MI_DiningFrame2_N.bmp
+
+newmtl MI_WhiteSemiMatte2
+	map_Kd MI_WhiteSemiMatte2_D.bmp
+	map_Ks MI_WhiteSemiMatte2_S.bmp
+	bump MI_WhiteSemiMatte2_N.bmp
+
+newmtl MI_DiningChairWood
+	map_Kd MI_DiningChairWood_D.bmp
+	map_Ks MI_DiningChairWood_S.bmp
+	bump MI_DiningChairWood_N.bmp
+
+newmtl MI_DiningChairWood2
+	map_Kd MI_DiningChairWood2_D.bmp
+	map_Ks MI_DiningChairWood2_S.bmp
+	bump MI_DiningChairWood2_N.bmp
+
+newmtl MI_DiningFrame1
+	map_Kd MI_DiningFrame1_D.bmp
+	map_Ks MI_DiningFrame1_S.bmp
+	bump MI_DiningFrame1_N.bmp
+
+newmtl MI_Newspaper
+	map_Kd MI_Newspaper_D.bmp
+	map_Ks MI_Newspaper_S.bmp
+	bump MI_Newspaper_N.bmp
+
+newmtl MI_Wall1
+	map_Kd MI_Wall1_D.bmp
+	map_Ks MI_Wall1_S.bmp
+	bump MI_Wall1_N.bmp
+
+newmtl MI_GetItDone
+	map_Kd MI_GetItDone_D.bmp
+	map_Ks MI_GetItDone_S.bmp
+	bump MI_GetItDone_N.bmp
+
+newmtl MI_WhiteGloss1
+	map_Kd MI_WhiteGloss1_D.bmp
+	map_Ks MI_WhiteGloss1_S.bmp
+	bump MI_WhiteGloss1_N.bmp
+
+newmtl MI_Scribble
+	map_Kd MI_Scribble_D.bmp
+	map_Ks MI_Scribble_S.bmp
+	bump MI_Scribble_N.bmp
+
+newmtl MI_WhiteFabric
+	map_Kd MI_WhiteFabric_D.bmp
+	map_Ks MI_WhiteFabric_S.bmp
+	bump MI_WhiteFabric_N.bmp
+
+newmtl MI_Yellow
+	map_Kd MI_Yellow_D.bmp
+	map_Ks MI_Yellow_S.bmp
+	bump MI_Yellow_N.bmp
+
+newmtl MI_Marble_Tan
+	map_Kd MI_Marble_Tan_D.bmp
+	map_Ks MI_Marble_Tan_S.bmp
+	bump MI_Marble_Tan_N.bmp
+
+newmtl MI_Frame_UE4
+	map_Kd MI_Frame_UE4_D.bmp
+	map_Ks MI_Frame_UE4_S.bmp
+	bump MI_Frame_UE4_N.bmp
+
+newmtl MI_GraySemiGloss
+	map_Kd MI_GraySemiGloss_D.bmp
+	map_Ks MI_GraySemiGloss_S.bmp
+	bump MI_GraySemiGloss_N.bmp
+
+newmtl MI_Book_PointOfView
+	map_Kd MI_Book_PointOfView_D.bmp
+	map_Ks MI_Book_PointOfView_S.bmp
+	bump MI_Book_PointOfView_N.bmp
+
+newmtl MI_Book_TheCat
+	map_Kd MI_Book_TheCat_D.bmp
+	map_Ks MI_Book_TheCat_S.bmp
+	bump MI_Book_TheCat_N.bmp
+
+newmtl MI_Picture_Street
+	map_Kd MI_Picture_Street_D.bmp
+	map_Ks MI_Picture_Street_S.bmp
+	bump MI_Picture_Street_N.bmp
+
+newmtl MI_DiningFrame_Leaf1
+	map_Kd MI_DiningFrame_Leaf1_D.bmp
+	map_Ks MI_DiningFrame_Leaf1_S.bmp
+	bump MI_DiningFrame_Leaf1_N.bmp
+
+newmtl MI_UE4Bag
+	map_Kd MI_UE4Bag_D.bmp
+	map_Ks MI_UE4Bag_S.bmp
+	bump MI_UE4Bag_N.bmp
+
+newmtl MI_Coat
+	map_Kd MI_Coat_D.bmp
+	map_Ks MI_Coat_S.bmp
+	bump MI_Coat_N.bmp
+
+newmtl MI_Brass
+	map_Kd MI_Brass_D.bmp
+	map_Ks MI_Brass_S.bmp
+	bump MI_Brass_N.bmp
+
+newmtl MI_CandleWhite
+	map_Kd MI_CandleWhite_D.bmp
+	map_Ks MI_CandleWhite_S.bmp
+	bump MI_CandleWhite_N.bmp
+
+newmtl MI_Gold
+	map_Kd MI_Gold_D.bmp
+	map_Ks MI_Gold_S.bmp
+	bump MI_Gold_N.bmp
+
+newmtl MI_GrayMatte
+	map_Kd MI_GrayMatte_D.bmp
+	map_Ks MI_GrayMatte_S.bmp
+	bump MI_GrayMatte_N.bmp
+
+newmtl MI_WhiteDoor
+	map_Kd MI_WhiteDoor_D.bmp
+	map_Ks MI_WhiteDoor_S.bmp
+	bump MI_WhiteDoor_N.bmp
+
+newmtl MI_Ceiling
+	map_Kd MI_Ceiling_D.bmp
+	map_Ks MI_Ceiling_S.bmp
+	bump MI_Ceiling_N.bmp
+
+newmtl MI_Floor
+	map_Kd MI_Floor_D.bmp
+	map_Ks MI_Floor_S.bmp
+	bump MI_Floor_N.bmp
+
+newmtl MI_Wall1FRONTDOOR
+	map_Kd MI_Wall1FRONTDOOR_D.bmp
+	map_Ks MI_Wall1FRONTDOOR_S.bmp
+	bump MI_Wall1FRONTDOOR_N.bmp
+
+newmtl MI_Wall_Accent
+	map_Kd MI_Wall_Accent_D.bmp
+	map_Ks MI_Wall_Accent_S.bmp
+	bump MI_Wall_Accent_N.bmp
+
+newmtl MI_FrameGlass
+	map_Kd MI_FrameGlass_D.bmp
+	map_Ks MI_FrameGlass_S.bmp
+	bump MI_FrameGlass_N.bmp
+
